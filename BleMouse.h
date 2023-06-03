@@ -23,6 +23,7 @@ private:
   void buttons(uint8_t b);
   void rawAction(uint8_t msg[], char msgSize);
   static void taskServer(void* pvParameter);
+  TaskHandle_t taskHandle;
 public:
   BleMouse(std::string deviceName = "ESP32 Bluetooth Mouse", std::string deviceManufacturer = "Espressif", uint8_t batteryLevel = 100);
   void begin(void);
